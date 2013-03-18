@@ -27,5 +27,4 @@ Citations][]
   [citeServiceTemplate-pandoc.txt]: https://raw.github.com/dsanson/bibdesk-pandoc-citation-template/master/citeServiceTemplate-pandoc.txt
   [these instructions]: http://sourceforge.net/apps/mediawiki/bibdesk/index.php?title=Templates#Adding_a_Template_to_BibDesk
   [Screenshot: Adding the Template to BibDesk]: adding-bibdesk-template.png
-  [Screenshot: Configuring BibDesk to use Template for Drag and Drop
-  Citations]: citation-screenshot.png
+  [Screenshot: Configuring BibDesk to use Template for Drag and Drop Citations]: citation-screenshot.png
