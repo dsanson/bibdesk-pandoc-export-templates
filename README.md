@@ -3,25 +3,33 @@ Drag and Drop Pandoc-Style Citations from BibDesk
 
 `citeServiceTemplate-pandoc.txt` is a BibDesk template that provides
 drag and drop support for pandoc-style citations. For example, I dragged
-these three citations directly from BibDesk:
+these two citations directly into this README from BibDesk:
 
-    [@olson2009; @forrest2004; @heathwood2005]
+    [@wood2006a; @beiser1993a]
+
+`citeServiceTemplate-pandoc-bib.txt` and `citeServiceTemplate-pandoc-bib.sh` are a BibDesk template and a postprocessing shell script that provide drag and drop support for markdown-formatted reference lists. For example, I option-dragged this reference list directly into this README from BibDesk:
+
+    Beiser, Frederick C. 1993. *The Fate of Reason: German Philosophy From Kant To Fichte*. Harvard University Press. 
+
+    Wood, Allen W. 2006. “Fichte’s Intersubjective I.” *Inquiry* 49 (1) (Feb): 62–79. 
+
 
 Installation
 ============
 
-1.  Download [citeServiceTemplate-pandoc.txt][] or clone this repo.
+First, follow [these instructions][] to add the templates to BibDesk. When you are done, things should look like this:
 
-2.  Follow [these instructions][] to add the template to BibDesk. When you are done, things
-    should look like this:
+![Screenshot: Adding the Template to BibDesk][]
 
-    ![Screenshot: Adding the Template to BibDesk][]
+Next, in the "Citation" Preference Pane:
 
-3.  In the "Citations" Preference Pane within BibDesk, set
-    `Default Format` to `Template`, then set `Template` to
-    `citeServiceTemplate-pandoc.txt`:
++   set `Default Format` to `Template`,
+then set `Template` to `citeServiceTemplate-pandoc.txt`;
++   set the `Format when holding Option key` to `Template`, then set `Template` to `citeServiceTemplate-pandoc-bib.txt`.
 
-    ![Screenshot: Configuring BibDesk to use Template for Drag and Drop
+So things should look like this:
+
+![Screenshot: Configuring BibDesk to use Template for Drag and Drop
 Citations][]
 
   [citeServiceTemplate-pandoc.txt]: https://raw.github.com/dsanson/bibdesk-pandoc-citation-template/master/citeServiceTemplate-pandoc.txt
