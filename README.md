@@ -58,10 +58,9 @@ Dependencies, Customization, Troubleshooting
 Pandoc
 ------
 
-The post-processing script depends on pandoc, so you need to have pandoc
-installed. The script looks for pandoc in `$HOME/.cabal/bin` and
-`/usr/local/bin`. If it is not found, you will get the following error
-message:
+The post-processing script depends on pandoc. The script looks for
+pandoc in `$HOME/.cabal/bin` and `/usr/local/bin`. If it is not found,
+you will get the following error message:
 
     Cannot find pandoc in path. Edit the PATH variable in exportMarkdownReferences.sh
 
