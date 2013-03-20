@@ -17,13 +17,11 @@ these two citations directly into this README from BibDesk:
 Installation
 ============
 
-First, edit the value of `pandoc` on line 3 of `citeServiceTemplate-pandoc-bib-script.sh` to point to your local install of pandoc.
-
-Second, follow [these instructions][] to add the templates to BibDesk. When you are done, things should look like this:
+First, follow [these instructions][] to add the templates to BibDesk. When you are done, things should look like this:
 
 ![Screenshot: Adding the Template to BibDesk][]
 
-Third, in the "Citation" Preference Pane:
+Second, in the "Citation" Preference Pane:
 
 +   set `Default Format` to `Template`,
 then set `Template` to `citeServiceTemplate-pandoc.txt`;
@@ -39,7 +37,19 @@ Notes
 
 If your bibtex file is large, there will be a noticeable delay when option-dragging, so you will need to be a patient.
 
-  [citeServiceTemplate-pandoc.txt]: https://raw.github.com/dsanson/bibdesk-pandoc-citation-template/master/citeServiceTemplate-pandoc.txt
+The postprocessing script looks for pandoc in `$HOME/.cabal/bin` and `/usr/local/bin`. If it is not found, you will get the following error message:
+
+    Cannot find pandoc in path. Edit the PATH variable in citeServiceTemplate-pandoc-bib-script.sh
+
+To fix this, edit line 6 of `citeServiceTemplate-pandoc-bib-script.sh`, replacing
+
+    PATH=$HOME/.cabal/bin:/usr/local/bin:$PATH
+
+with
+
+    PATH=/path/to/pandoc:$PATH
+
+
   [these instructions]: http://sourceforge.net/apps/mediawiki/bibdesk/index.php?title=Templates#Adding_a_Template_to_BibDesk
   [Screenshot: Adding the Template to BibDesk]: adding-bibdesk-template.png
   [Screenshot: Configuring BibDesk to use Template for Drag and Drop Citations]: citation-screenshot.png
