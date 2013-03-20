@@ -72,7 +72,7 @@ replacing
 
 with
 
-    PATH=/path/to/pandoc:$PATH
+    PATH=/directory/containing/pandoc:$PATH
 
 Other Output Formats and Styles
 -------------------------------
