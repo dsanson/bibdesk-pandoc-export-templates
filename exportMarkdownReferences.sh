@@ -22,7 +22,6 @@ read refs
 command -v pandoc >/dev/null 2>&1 || { echo "Cannot find pandoc in path. Edit the PATH variable in citeServiceTemplate-pandoc-bib-script.sh"; exit 0;}
 
 # Pass the list of pandoc-formated references to pandoc.
-echo "$refs" | pandoc -t markdown-citations --no-wrap --bibliography="$bibfile" --csl="chicago-author-date.csl" 2>/dev/null | tail -n+5 | grep -v "</div>"
+echo "$refs" | pandoc -t markdown-citations --no-wrap --bibliography="$bibfile" 2>/dev/null | tail -n+5 | grep -v "</div>"
 
 exit 0
-
