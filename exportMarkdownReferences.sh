@@ -3,7 +3,7 @@
 # Postprocessing script for dragging markdown formatted references
 # out of BibDesk.
 
-# The script needs to find pandoc. Here are some places it is likely to be. 
+# The script needs to find pandoc. Here are some places it is likely to be.
 # You can also edit the PATH variable in citeServiceTemplate-pandoc-bib-script.sh
 
 PATH=$HOME/.cabal/bin:/usr/local/bin:$PATH
@@ -22,7 +22,6 @@ read refs
 command -v pandoc >/dev/null 2>&1 || { echo "Cannot find pandoc in path. Edit the PATH variable in citeServiceTemplate-pandoc-bib-script.sh"; exit 0;}
 
 # Pass the list of pandoc-formated references to pandoc.
-echo "$refs" | pandoc -t markdown-citations --no-wrap --bibliography="$bibfile" 2>/dev/null | tail -n+5 | grep -v "</div>"
+echo "$refs" | pandoc --to markdown-citations --no-wrap --bibliography="$bibfile" 2>/dev/null | sed '1d' | grep -v '</div>' | grep -v '<div class="references">' | grep -v '<div id=.*>' | tr -s '\n'
 
 exit 0
-
