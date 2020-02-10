@@ -94,7 +94,7 @@ with a 1307 entry bibtex file, the delay is less than a second.
 
   [BibDesk]: http://bibdesk.sourceforge.net/
   [pandoc]: http://johnmacfarlane.net/pandoc/
-  [these instructions]: http://sourceforge.net/apps/mediawiki/bibdesk/index.php?title=Templates#Adding_a_Template_to_BibDesk
+  [these instructions]: https://sourceforge.net/p/bibdesk/wiki/Templates/#adding-a-template-to-bibdesk
   [Screenshot: Adding the Template to BibDesk]: adding-bibdesk-template.png
   [Screenshot: Configuring BibDesk to use Template for Drag and Drop Citations]: citation-screenshot.png
   [csl]: https://github.com/citation-style-language/styles
